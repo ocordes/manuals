@@ -202,39 +202,37 @@ Die JupyterLab-Umgebung ist ein abgeschlossenes System, welches von aussen nur d
 
 Wenn Sie eingeloggt sind, haben Sie zwei Möglichkeiten Daten *rein* und *raus* zu koperen:
 
-
-1. In the file browser you can use the context menu after clicking the right mouse button which provides you a *Download* entry. With this function you can download any files which is shown in the file browser. For uploading files you can use the *Upload* button (see Sect. 1.5). All uploaded files will be stored in the current working directory of the file browser.
-2. The other possibility is to use any of the programs in a terminal tab. In the terminal there is a Ubuntu Linux OS running which provides some of the common programs for data exchange, *scp*, *wget*, *git*, etc. 
+1. Im Datei-Browser können Sie bei jeder Datei mit der rechte Maustaste das Context-Menu aufrufen, in dem eine *Download*-Funktion angeboten wird. Diese Funktion lädt die Datei auf Ihr lokales Gerät herunten. Um Dateien in die Umgebung hochzuladen, nutzen Sie den *Upload*-Button (siehe Abschnitt 1.5). Alle hochgeladenen Dateien werden in dem aktuellen Arbeitsverzeichnis abgelegt. Wenn Sie in dem Datei-Browser auf ein freies Feld das Context-Menu mit der rechten Maustaste aufrufen, finden Sie eine Funktion *Download current folder as an archive*. Wenn Sie diese aufrufen, bekommen Sie das aktuelle Verzeichnis als Archiv zum herunterladen angeboten. Der Name des Archivs richtet sich nach dem Namen des aktuelle Verzeichnis. In dem Archiv finden Sie das Verzeichnis auch als Archiv-Verzeichnis wieder! 
+2. Die andere Möglichkeit Daten in und aus der Umgebung zu kopieren ist die Nutzung von Kommandozeilen Programmen im Terminal-Reiter. In dem Terminal haben Sie direkten Zugriff auf das Ubuntu Linux OS welches z.B. *scp*, *wget*, *git*, usw. zum Datenaustausch bereitstellt.
 
 ------
 
-## 4. Ending a session
+## 4. Das Beenden der Arbeitssitzung
 
-The best way is to logout in the case you stop working with the jupyterlab environment. You can use the *logout button*  on the top right of the browser window. As long as the browser window is open and you're connected to the internet you will be logged in. In any other case your session will automatically closed by the server.
+Der beste weg, die Arbeitssitzung zu beenden, ist die logout-Funktion. Sie können dafür den *logout button* in der oberen rechten Ecke des Browser-Fensters nutzen. Solange Sie sonst das Browser-Fenster offen lassen und mit dem Internet verbunden sind, bleiben Sie in der eingeloggt. Ansonsten kann der JupyterHub-Server die Sitzung automatisch beenden, z.B. bei längerer Inaktivität.
 
-If you login again the server will open all the tabs which were open during the logout process. So you can pick up your work at the same place. If you're logged out the server will destroy the session after 30 minutes to give the ressources to the next user! This means that you should logout properly when you don't want to use the system anymore!
+Wenn Sie sich wieder in einer neuen Sitzung anmelden, versucht die Software-Umgebung alle Reiter wieder zu öffnen, die bei der letzten Sitzung genutzt werden. Technisch löscht der Server Ihre Sitzung 30 Minuten nach dem Ausloggen, damit die Ressourcen anderen Nutzern zur Verfügung gestellt werden kann! Sie sollten darauf achten, sich auszuloggen, wenn Sie nicht weiter arbeiten wollen.
 
 ------
 
 <div style="page-break-after: always"></div>
 
-## 5. Keyboard-Shortcuts
+## 5. Tastatur-Kurzbefehle
+
+Zum Bearbeiten der Jupyter-Notebooks haben wir ein paar Tastatur-Kurzbefehle zusammengestellt, die sehr nützlich sind (nicht alle Kurzbefehle sind hier erwähnt):
+
+Wenn Sie mit MacOS arbeiten, ersetzen Sie bitte `command` für `control` (`Steuerung`). Drücken Sie bitte nicht _+_ (dies meint nur, dass beide Tasten gleichzeitig gedrückt werden sollen).
 
 
-For editing Jupyter Notebooks here are some keyboard shortcuts which are quite helpful (not all shortcuts are mentioned):
+### 5.1 Kurzbefehle im  _command mode_ (ausserhalb der Zellen) or im _edit mode_ (innerhalb der Zellen) 
+- `Shift` + `Enter` führt die markierte Zelle oder Zellen aus - wenn keine Zelle unterhalb existiert, füge eine neue Code-Zelle drunter ein
 
-If you are on a Mac, substitute `command` for `control`. Don't type the _+_ (it means press both keys at once).
+- `Ctrl` + `B` Aktiviert oder deaktiviert die linke Seitenleiste
+- `Ctrl` + `S` Sichern und einen Checkpoint anlegen
+- `Ctrl` + `Shift` + `S` Sichern als
+- `Ctrl` + `F` Suchen
 
-### 5.1 Shortcuts when in either _command mode_ (outside the cells) or _edit mode_ (inside a cell) 
-- `Shift` + `Enter` run selected cell or cells - if no cells below, insert a code cell below
-
-- `Ctrl` + `B` toggle hide/show left sidebar
-
-- `Ctrl` + `S` save and checkpoint
-- `Ctrl` + `Shift` + `S` save as
-- `Ctrl` + `F` find 
-
-### 5.2 Shortcuts when in _command mode_ (outside the cells, no blinking cursor)
+### 5.2 Kurzbefehle im  _command mode_ (ausserhalb der Zellen ohne blinkendem Cursor)
 
 - `Enter` enter _edit mode_ in the active cell
 

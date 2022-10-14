@@ -195,7 +195,7 @@ The jupyterlab environment is a closed system which is available from outside on
 
 If a web session is running there are two possibilities to copy data *in* and *out*:
 
-1. In the file browser you can use the context menu after clicking the right mouse button which provides you a *Download* entry. With this function you can download any files which is shown in the file browser. For uploading files you can use the *Upload* button (see Sect. 1.5). All uploaded files will be stored in the current working directory of the file browser.
+1. In the file browser you can use the context menu after clicking the right mouse button which provides you a *Download* entry. With this function you can download any files which is shown in the file browser. For uploading files you can use the *Upload* button (see Sect. 1.5). All uploaded files will be stored in the current working directory of the file browser. If you are using the right mouse button on an empty region of the file browser you will get an additional context menu with a *Download current folder as an archive* entry. This downloads the current folder in an archive to your local device. The name of the archive is the name of the current folder. In the archive you have the current folder as an archive folder!
 2. The other possibility is to use any of the programs in a terminal tab. In the terminal there is a Ubuntu Linux OS running which provides some of the common programs for data exchange, *scp*, *wget*, *git*, etc. 
 
 ------
