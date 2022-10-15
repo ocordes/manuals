@@ -470,7 +470,7 @@ Here are some questions which may help you in the case that you face some proble
 
 - When I logged into the system the webpage is somehow flickering?
 
-  You are probably using an *Apple Safari* browser, please use either a *Mozilla Firefox* or Google Chrome/Chromium browser.
+  You are probably using an old *Apple Safari* browser, please use either a *Mozilla Firefox* or Google Chrome/Chromium browser.
 
 - The jupyterlab environment didn't start normally, what can I do?
 

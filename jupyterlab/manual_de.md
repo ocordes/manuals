@@ -234,122 +234,123 @@ Wenn Sie mit MacOS arbeiten, ersetzen Sie bitte `command` für `control` (`Steue
 
 ### 5.2 Kurzbefehle im  _command mode_ (ausserhalb der Zellen ohne blinkendem Cursor)
 
-- `Enter` enter _edit mode_ in the active cell
+- `Enter` Aktiviert _edit mode_ in der aktivierten Zelle
 
-- Scroll up with the up arrow 
-- Scroll down with the down arrow
+- Nach oben scrollen mit dem Pfeil nach oben
+- Nach unten scrollen mit dem dem Pfeil nach unten
 
-- `A` insert a new cell above the active cell
-- `B` insert a new cell below the active cell
+- `A` Füge eine neue Zelle über der aktiven Zelle ein
+- `B` Füge eine neue Zelle unter de aktiven Zelle ein
 
-- `M` make the active cell a Markdown cell
-- `Y` make the active cell a code cell
+- `M` Verändere die aktive Zelle in eine Markdown-Zelle
+- `Y` Verändere die aktive Zelle in eine Code-Zelle
 
-- `Shift` + `Up Arrow` select the current cell and the cell above
-- `Shift` + `Down Arrow` select the current cell and the cell below
-- `Ctrl` + `A` select all cells
+- `Shift` + `Up Arrow` Selektiere die aktuelle und die Zelle darüber
+- `Shift` + `Down Arrow` Selektiere die aktuelle und die Zelle darunter 
+- `Ctrl` + `A` Selektiere alle Zellen
 
-- `X` cut the selected cell or cells
-- `C` copy the selected cell or cells
-- `V` paste the cell(s) which were copied or cut most recently
+- `X` Schneide die selektierte Zelle(n) aus
+- `C` Kopiere die selektierten Zelle(n)
+- `V` Füge die Zelle(n) ein, die vorher kopiert/ausgeschnitten wurden
 
-- `Shift + M` merge multiple selected cells into one cell
+- `Shift + M` Führe mehere selektierte Zellen in einer Zelle zusammen
 
-- `DD` (`D` twice) delete the active cell
-- `00` (Zero twice) restart the kernel
+- `DD` (`D` zweimal) Lösche die aktuelle Zelle
+- `00` (Null zweimal) Starte den Kernel neu
 
-- `Z` undo most recent command mode action
+- `Z` Nehme die letzte Kommando-Aktion zurück
 
-### 5.3 Shortcuts when in _edit mode_ (inside a cell with a blinking cursor)
+### 5.3 Kurzbefehle im _edit mode_ (innerhalb der Zellen mit blinkendem Cursor)
 
-- `Esc` enter _command mode_
+- `Esc` Aktiviert _command mode_
 
-- `Tab` code completion (or indent if at start of line)
-- `Shift` + `Tab` tooltip help
-- `Ctrl` + `Shift` + `-` split the active cell at the cursor
+- `Tab` Code completion (oder Einrücken, wenn der Cursor am Anfang der Zeile steht)
+- `Shift` + `Tab` Tooltip-Hilfe
+- `Ctrl` + `Shift` + `-` Teilt die aktive Zelle an der Cursor-Position
 
-### 5.4 The usual commands for code editors (may work):
+### 5.4 Nützliche Kommands für den Code-Editor (funktioniert vielleicht):
 
-- `Ctrl` + `]` indent
-- `Ctrl` + `[` dedent
+- `Ctrl` + `]` Einrücken
+- `Ctrl` + `[` nach links Rücken
 
-- `Ctrl` + `/` toggle comment
+- `Ctrl` + `/` Selektierte Zeilen kommentieren/oder Kommentarzeichen entfernen
 
-Plus the usual shortcuts for select all, cut, copy, paste, undo, etc.
+Dazu alle üblichen Kurzbefehle für das Selektieren, Ausschneiden, Kopieren, Einfügen, Zurücknehmen, usw. 
 
 
 ------
 
 <div style="page-break-after: always"></div>
 
-## 6. Markdown language
+## 6. Die Markdown-Sprache
 
-In Jupyter Notebooks you can use *Markdown cells* which are quite useful for notes and descriptions. Basically you can use any html-elements in the markdown cells, but for many tasks there are simple and short markdown commands.
+In den Jupyter-Notebooks können Sie *Markdown-Zellen* nutzen, welche sehr nützlich sind für Notizen und Dokumentationen. Prinzipiell können alle bekannten html-Elemente genutzt werden, jedoch gibt es für verschiedene Aufgaben einfache und kürzere Markdown-Befehle.
 
 
-### 6.1 Text styles
-
-```
-*Text is written in italic!*
-_Text is also written in italic!_
-**Text is written in bold!**
-__Text is also written in bold!__
-```
-*Text is written in italic!*<br>
-_Text is also written in italic!_<br>
-**Text is written in bold!**<br>
-__Text is also written in bold!__
-
-### 6.2 Headlines
+### 6.1 Text-Stile
 
 ```
-# Headline 1
-## Headline 2
-### Headline 3
-#### Headline 4
+*Der Text ist kursiv geschrieben!*
+_Der Text ist auch kursiv geschrieben!_
+**Der Text ist fett geschrieben!**
+__Der Text is auch fett geschrieben!__
+```
+*Der Text ist kursiv geschrieben!*<br>
+_Der Text ist auch kursiv geschrieben!_<br>
+**Der Text ist fett geschrieben!**<br>
+__Der Text is auch fett geschrieben!__
+
+
+### 6.2 Überschriften
+
+```
+# Überschrift 1
+## Überschrift 2
+### Überschrift 3
+#### Überschrift 4
 ```
 
-The headlines appears in different sizes, `# Headline 1` is biggest and the others are continously smaller. (No example here, because this will break the table of contents!)
+Überschriften eerscheinen in verschiedenen Größen, `# Überschrift 1` ist die Größte und die anderen werden dann kontinuierlich kleiner. (Ein Beispiel ist weggelassen, weil es dann
+das Inhaltsverzeichnis stört!)
 
 
-### 6.3 Lists
+### 6.3 Listen
 
-Lists are ordered or unordered:
+Listen gibt es als Aufzählung und als Spiegelstrich-Liste:
 
 ```
-* Lists must be preceded by a blank line (or block element)
-* Unordered lists start each item with a `*`
-- `-` works too
-	* Indent a level to make a nested list
-		1. Ordered lists are supported.
-		2. Start each item (number-period-space) like `1. `
-		42. It doesn't matter what number you use, I will render them sequentially
-		1. So you might want to start each line with `1.` and let me sort it out
+* Vor den Listen muss immer eine Leerzeile stehen (oder ein anderes Block-Element)
+* Spiegelstrich-Listen fangen mit einem `*` vor jedem Element an
+- `-` geht auch
+	* Eine Einrückung erzeugt eine verschachtelte Liste
+		1. Aufzählungen werden so gemacht.
+		2. Jedes Element muss wie `1.` (Zahl-Punkt-Leerzeichen) beginnen
+		42. Es macht keinen Unterschied, welche Zahl genutzt wird, es wird immer hochgezählt
+		1. Man kann also jede Zeile mit `1.` beginnen
 ```
 
-* Lists must be preceded by a blank line (or block element)
-* Unordered lists start each item with a `*`
-- `-` works too
-	* Indent a level to make a nested list
-		1. Ordered lists are supported.
-		2. Start each item (number-period-space) like `1. `
-		42. It doesn't matter what number you use, I will render them sequentially
-		1. So you might want to start each line with `1.` and let me sort it out
+* Vor den Listen muss immer eine Leerzeile stehen (oder ein anderes Block-Element)
+* Spiegelstrich-Listen fangen mit einem `*` vor jedem Element an
+- `-` geht auch
+	* Eine Einrückung erzeugt eine verschachtelte Liste
+		1. Aufzählungen werden so gemacht.
+		2. Jedes Element muss wie `1.` (Zahl-Punkt-Leerzeichen) beginnen
+		42. Es macht keinen Unterschied, welche Zahl genutzt wird, es wird immer hochgezählt
+		1. Man kann also jede Zeile mit `1.` beginnen
 
 
-### 6.4 Inline Code
+### 6.4 Inline-Code im Text
 
-`Inline code` is indicated by surrounding it with backticks:  
-`` `Inline code` ``
+`Inline-Code` wird mit *rückwärts geneigten Hochkommata* (backticks) umrandet:  
+`` `Inline-Code` ``
 
-If your ``code has `backticks` `` that need to be displayed, you can use double backticks:  
-```` ``Code with `backticks` `` ````  (mind the spaces preceding the final set of backticks)
+Wenn der  ``Code selber `Hochkommata` `` enthältz, die dargestellt werden sollen, können doppelte Hochkommata verwendet werden:
+```` ``Code mit `Hochkommata` `` ````  (daran denken, dass die Leerzeichen das wichtigste Set an Hochkommata abgrenzen)
 
 
-### 6.5 Block Code
+### 6.5 Block-Code im Text
 
-You can write block code with a starting and ending ```` ``` ````. If you specify a name of
-the coding language you can also use syntax highlighting:
+Block-Code wird im Text mit einem  ```` ``` ```` angefangen und beendet. Wird eine Programmiersprache beim Start mitgegeben, so bekommt man den Block-Code mit Syntax-Hervorhebung in Farbe:
 
 ```
  ```python
@@ -360,7 +361,7 @@ the coding language you can also use syntax highlighting:
    x = 42
  ```
 ```
-This is the result:
+So wird das dargestellt:
 
 ~~~python
 print('This is a code block')
@@ -371,15 +372,15 @@ else:
 ~~~
 
 
-### 6.6 Horizontal Rules
-If you type three asterisks `***` or three dashes `---` on a line, a horizontal rule will be displayed:
+### 6.6 Eine horizontale Linie
+Wenn Sie drei Sterne `***` oder drei Striche `---` in einer Zeile schreiben, wird daraus eine horizontale Linie erstellt:
 
 ***
 
 
-### 6.7 Images
+### 6.7 Bilder
 
-For images the best way is to use the html commands:
+Um Bilder einzufügen, nutzt man am Besten das HTML-Kommando:
 
 ```
 <img src="figs/aifa_logo.png" style="height: 100px;" />
@@ -387,15 +388,16 @@ For images the best way is to use the html commands:
 
 <img src="figs/aifa_logo.png" style="height: 100px;" />
 
-This command has all freedom to specify the relative sizes of the image if necessary. The example scales the image to a height of 100 pixels.
+Dieses Kommando bietet alle Freiheiten, z.B. die relativen Größen des Bildes zu definieren, wenn es notwendig ist. Das Beispiel skaliert das Bild gleichmässig auf eine Höhe von 100 Pixeln.
+
 
 ### 6.8 Links
 
-Links can be inserted as plain text:
+Links können als einfacher Text:
 
 <https://jupyterhub-students.astro.uni-bonn.de>
 
-or with a markdown command:
+oder mit einem Markdown-Kommando erzeugt werden:
 
 ```
 [JupyterHub at AIfA](https://jupyterhub-students.astro.uni-bonn.de)
@@ -404,17 +406,18 @@ or with a markdown command:
 [JupyterHub at AIfA](https://jupyterhub-students.astro.uni-bonn.de)
 
 
-### 6.9 $\LaTeX$ code
+### 6.9 $\LaTeX$-Code
 
-One nice feature is the possibility to include $\LaTeX$ code inside markdown cells. This is mostly used for math expressions:
+Ein nettes Feature von Markdown-Zellen ist, dass man $\LaTeX$-Code direkt in den Text einfügen kann. Dies wird vielfach zum Setzen von mathematischen Ausdrücken genutzt:
 
 ```
-This is a text with a formular $f(x)=x^2$.
+Dies ist ein Text mit der Formel $f(x)=x^2$.
 ```
 
-This is a text with a formular $f(x)=x^2$.
+Dies ist ein Text mit der Formel $f(x)=x^2$.
 
-For equation blocks, you can use:
+
+Für Formel-Blöcke nutzt man diese Anweisungen:
 
 ```
 $$
@@ -428,39 +431,41 @@ f(x) = \sum_{i=1}^n i  \\
   = \frac{n(n+1)}{2}
 $$
 
-### 6.10 Tables
+### 6.10 Tabellen
 
-Tables are possible, but needs some more characters.
+Tabellen sind auch möglich, jedoch muss man etwas mehr schreiben.
 
-This is a simple table:
-
-```
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-```
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-
-You can align cell contents with syntax like this:
+Dies ist ein einfache Tabelle:
 
 ```
-| Left Aligned  | Center Aligned  | Right Aligned |
-|:------------- |:---------------:| -------------:|
-| col 3 is      | some wordy text |         $1600 |
-| col 2 is      | centered        |           $12 |
-| zebra stripes | are neat        |            $1 |
+Erste Überschrift | Zweite Überschrift
+----------------- | ------------------
+Zellen-Inhalt     | Zellen-Inhalt
+Zellen-Inhalt     | Zellen-Inhalt
 ```
 
-| Left Aligned  | Center Aligned  | Right Aligned |
-|:------------- |:---------------:| -------------:|
-| col 3 is      | some wordy text |         $1600 |
-| col 2 is      | centered        |           $12 |
-| zebra stripes | are neat        |            $1 |
+
+Erste Überschrift | Zweite Überschrift
+----------------- | ------------------
+Zellen-Inhalt     | Zellen-Inhalt
+Zellen-Inhalt     | Zellen-Inhalt
+
+Der Inhalt der Tabellen-Zellen können auch ausgerichtet werden:
+
+```
+| linksbündig   | zentriert.           | rechtsbündig  |
+|:------------- |:--------------------:| -------------:|
+| Spalte 3 ist  | ein wortreicher Text |         $1600 |
+| Spalte 2 ist  | zentriert            |           $12 |
+| Zebrastreifen | sind hübsch          |            $1 |
+```
+
+| linksbündig   | zentriert            | rechtsbündig  |
+|:------------- |:--------------------:| -------------:|
+| Spalte 3 ist  | ein wortreicher Text |         $1600 |
+| Spalte 2 ist  | zentriert            |           $12 |
+| Zebrastreifen | sind hübsch          |            $1 |
+
 
 ----
 
@@ -468,30 +473,31 @@ You can align cell contents with syntax like this:
 
 ## 7. FAQ
 
-Here are some questions which may help you in the case that you face some problems with the jupyterlab environment.
+Hier sind ein paar Problemstellungen erwähnt, die helfen können, wenn es zu Problemen mit der JupyterLab-Umgebung kommt:
 
-- When I logged into the system a see only a white empty page?
+- Wenn ich mich eingeloggt habe, sehe ich nur eine weisse Seite?
+	
+  Sie arbeiten vermutlich mit dem *Microsoft Edge*-Browser, nutzen Sie bitte entweder einen
+  *Mozilla Firefox*- oder *Google Chrome/Chromium*-Browser.
 
-  You are probably using a *Microsoft Edge* brower, please use either a *Mozilla Firefox* or Google Chrome/Chromium browser.
+- Wenn ich mich eingeloggt habe, zeigt die Webseite ein Flackern?
 
-- When I logged into the system the webpage is somehow flickering?
+  Sie arbeiten vermutlich mit einem alten  *Apple Safari*-Browser, nutzen Sie bitte entweder einen *Mozilla Firefox*- oder *Google Chrome/Chromium*-Browser.
 
-  You are probably using an *Apple Safari* browser, please use either a *Mozilla Firefox* or Google Chrome/Chromium browser.
+- Die JupyterLab-Umgebung startet nicht ordentlich, was kann ich machen?
 
-- The jupyterlab environment didn't start normally, what can I do?
+  Es gibt verschiedene Möglichkeiten, welche das ordentliche Starten verhindern. Wir haben einige bekannte aufgelistet:
 
-  There are different possibilities which prohibit the environment to start. In the past we have faced a few problems:
+  - Das Arbeitsverzeichnis konnte nicht gefunden werden. In diesem Fall informieren Sie Ihren Tutor oder [Oliver Cordes](mailto:Oliver Cordes <ocordes@astro.uni-bonn.de>)!
+  - Das System hat keine verfügbaren Ressourcen mehr, z.B. zuwenige freie CPUs; in diesem Fall müssen Sie waren, bis ein anderer Nutzer seine Arbeitssitzung beendet hat!
+  - Es liegt ein Hardware-/Software-Problem vor, bitte informieren Sie Ihren Tutor oder [Oliver Cordes](mailto:Oliver Cordes <ocordes@astro.uni-bonn.de>) !
 
-  - The home directory couldn't be attached to the running session, please inform your tutor or [Oliver Cordes](mailto:Oliver Cordes <ocordes@astro.uni-bonn.de>) !
-  - The system is running out of resources, e.g. less CPUs; in this case please be patient and wait a couple of minutes until some of the users logged out!
-  - The is a major hardware/software problem, please inform your tutor or Oliver Cordes!
+- Die Context-Hilfe ist nicht verfügbar, nachdem cmd-/Ctrl-I gedrückt wurde?
 
-- The contextual help is not working after pressing cmd-/Ctrl-I?
-
-   Probably no conextual help tab is open. Please open a new *Launcher tab* and click on the *Contextual Help* button.
+   Wahrscheinlich ist kein Context-Hilfe-Reiter offen. Starten Sie diese im *Launcher*-Reiter und klicken Sie auf auf den *Contextual Help*-Button.
 
 ----
-**Notes**: The texts contains some parts from the official help page of the 
-[Macdown editor <img src="http://macdown.uranusjr.com/static/images/logo-160.png" style="height:20px;" />](http://macdown.uranusjr.com/).
+**Notes**: Der Text enthält einige Passagen aus der offiziellen Hilfe-Seite vom 
+[Macdown-Editor <img src="http://macdown.uranusjr.com/static/images/logo-160.png" style="height:20px;" />](http://macdown.uranusjr.com/).
 
 

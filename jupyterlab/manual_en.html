@@ -491,7 +491,7 @@ pre[class*="language-"] {
 <a href="#toc_1">0. Prerequisites</a>
 </li>
 <li>
-<a href="#toc_2">1. Login into jupyterlab</a>
+<a href="#toc_2">1. Login into JupyterLab</a>
 <ul>
 <li>
 <a href="#toc_3">1.1 The file browser</a>
@@ -613,15 +613,15 @@ pre[class*="language-"] {
 
 <p>Before you start with this manual please be sure that you&#39;re using either the <em>Mozilla Firefox</em> or <em>Google Chrome/Chromium</em> browser. We had a lot of problems with <em>Microsoft Edge</em> and <em>Apple Safari</em> browsers.</p>
 
-<p>Also there is no need to install any special software on you devices, Laptop, Tables, Smart phones. You only need an internet connection a working browser and a keyboard and mouse for editing files. A big screen for your work is in any case a good solution.</p>
+<p>Also there is no need to install any special software on you devices, Laptop, Tables or Smart phones. You only need an internet connection, a working browser and a keyboard and mouse for editing files. A big screen for your work is in any case a good solution.</p>
 
 <hr>
 
 <div style="page-break-after: always"></div>
 
-<h2 id="toc_2">1. Login into jupyterlab</h2>
+<h2 id="toc_2">1. Login into JupyterLab</h2>
 
-<p>The python environment is running on a server in the Argelander Institute for Astronomie. Type in the following address into any web browser:<a href="">https://jupyterhub-students.astro.uni-bonn.de</a></p>
+<p>The JupyterLab environment is running on a server in the Argelander Institute for Astronomie. Type in the following address into any web browser:<a href="">https://jupyterhub-students.astro.uni-bonn.de</a></p>
 
 <p>You will see the following login page:</p>
 
@@ -653,7 +653,7 @@ pre[class*="language-"] {
 
 <p>The file browser is like the typical file browser you already know from different OSes. It shows the actual working directory and then all directories and files inside this working directory. You can switch to sub directories by clicking on some directory in the list. To move to upper directories please click on the specific directory in the working directory label. The file browser has some quick functions in a context menu which you can open by using the right hand mouse button, e.g. creating a new sub directory or renaming a file:</p>
 
-<p><img src="fig/newdirectory.png" alt="newdirectory" style="zoom:67%;" /> </p>
+<p><img src="figs/newdirectory.png" alt="newdirectory" style="zoom:67%;" /> </p>
 
 <p>All other functions in the context menus are most self explaining. If you double-click on a file the corresponding program will be opened in a new tab, e.g. if you double-click on a notebook, the notebook editor will be opened.</p>
 
@@ -681,7 +681,7 @@ pre[class*="language-"] {
 
 <h3 id="toc_8">1.5 The Upload button</h3>
 
-<p>Using this button opens an uploading dialog of your web browser. All choosen files will be uploaded into the current working directory of the file browser.</p>
+<p>Using this button opens an uploading dialog of your web browser. You can choose a file wich will be uploaded into the current working directory of the file browser.</p>
 
 <h3 id="toc_9">1.6 The text file editor</h3>
 
@@ -693,7 +693,7 @@ pre[class*="language-"] {
 
 <h2 id="toc_10">2. Python notebook editor</h2>
 
-<p>In this setion we will show how the notebook editor is working with an example. We will create a notebook with some code and documentation.</p>
+<p>In this section we will show how the notebook editor is working with an example. We will create a notebook with some code and documentation.</p>
 
 <h3 id="toc_11">2.1 Example creation of a python notebook</h3>
 
@@ -713,17 +713,17 @@ pre[class*="language-"] {
 
 <h3 id="toc_12">2.2 Open an existing notebook</h3>
 
-<p>The simplest way is to double click on any notebook file in any directory. This will open the notebook in a new tab!</p>
+<p>The simplest way is to double click on any notebook file in any directory in the file browser. This will open the notebook in a new tab!</p>
 
 <h3 id="toc_13">2.3 Writing a notebook</h3>
 
-<p>After we have created an empty notebook we can write some content into the notebook.  The complete notebook is arranged by so called cells which are stacked on top of each other. The cells can have different types. The important types are <em>code cells</em> and <em>markdown cells</em>. In <em>code cells</em> you can write your program code which can be executed by an interpreter running in the background which is called <em>kernel</em>. In this example the only kernel available is a <em>Python</em> kernel. In other confiurations there are also <em>bash</em>, <em>Julia</em>, <em>C++</em> kernels available. &#39;Markdown cells&#39; are typically used to write static content e.g. code documentation, exercise descriptions, images etc. </p>
+<p>After we have created an empty notebook we can write some content into the notebook.  The complete notebook is arranged by so called cells which are stacked on top of each other. The cells can have different types. The important types are <em>code cells</em> and <em>markdown cells</em>. In <em>code cells</em> you can write your program code which can be executed by an interpreter running in the background which is called <em>kernel</em>. In this example the only kernel available is a <em>Python</em> kernel. In other configurations there are also <em>bash</em>, <em>Julia</em>, <em>C++</em> kernels available. <em>Markdown cells</em> are typically used to write static content e.g. code documentation, exercise descriptions, images etc. </p>
 
 <p>In this example we write some python code into the first cell:</p>
 
 <p><img src="figs/editnotebook.png" alt="editnotebook"></p>
 
-<p>The first cell has now the Python equivalent of the typical <em>Hello world!</em>-program. After a cell was edited you can execute the content by pressing <em>Shift-Enter</em>. The result of the execution is written below the previous cell:</p>
+<p>The first cell has now the Python equivalent of the typical <em>Hello world!</em>-program. After a cell was edited you can execute the content by pressing <em>Shift-Enter</em>. The result of the execution is written below the previous edited cell:</p>
 
 <p><img src="figs/runprogram.png" alt="runprogram"></p>
 
@@ -735,7 +735,7 @@ pre[class*="language-"] {
 
 <p><img src="figs/celltype.png" alt="celltype"></p>
 
-<p>Now you the layout of the cell slightly changes and you can type some content. One interesting feature of such a mark down cell is that you can use \(\LaTeX\) commands e.g. equations which are displayed similar to any LaTeX documents:</p>
+<p>Now you the layout of the cell slightly changes and you can type some content. Markdown commands described in Sect. 6.  One interesting feature of such a mark down cell is that you can use \(\LaTeX\) commands e.g. equations which are displayed similar to any \(\LaTeX\) documents:</p>
 
 <p><img src="figs/markdown1.png" alt="markdown1"> </p>
 
@@ -745,13 +745,13 @@ pre[class*="language-"] {
 
 <p>\(\LaTeX\) commands are perfectly interpreted. </p>
 
-<p>To update existing cells in the notebook, you simply double click with your mouse double click on a cell and you are back in the edit mode. You can also change the type of the cell in the case that you started with a code cell and wanted to write some documentation. </p>
+<p>To update existing cells in the notebook, you simply double click with your mouse on a cell and you are back in the edit mode. You can also change the type of the cell in the case that you started with a code cell and wanted to write some documentation. </p>
 
 <p>In any case after you&#39;ve written content to the notebook you should save the complete notebook with the typical Save-Command <em>cmd-S</em> (MacOS), <em>Ctrl-S</em> (Linux, Windows?). You can also use the main menu which has all the necessary entries of a standard editor you probably know. </p>
 
 <h3 id="toc_14">2.4 The Run cell menu</h3>
 
-<p>In the editor menu there is a special menu called <em>Run</em>. With this men you can run one or many cells of your notebook. This is sometimes necessary if you create many code cells.</p>
+<p>In the editor menu there is a special menu called <em>Run</em>. With this menu you can run one or many cells of your notebook. This is sometimes necessary if you create many code cells.</p>
 
 <p><img src="figs/runmenu.png" alt="runmenu" style="zoom:67%;" /></p>
 
@@ -767,7 +767,7 @@ pre[class*="language-"] {
 
 <p><img src="figs/contexthelp.png" alt=""></p>
 
-<p>Now go back to the notebook editor. In the first code cell we have the python command <em>print</em>. Use the left mouse click to activate the cell and click a second time on the <em>print</em> command. Then you can also use <em>cmd-I</em> (MacOS) or <em>Ctrl-I</em> (Linux/Windows) to activate the help function. The contextual help page should show the help page for the print command. If you enter a new command the help page will change if a valid command is detected.</p>
+<p>Now go back to the notebook editor. In the first code cell we have the python command <em>print</em>. Use the left mouse click to activate the cell and click a second time on the <em>print</em> command. Then you can also use <em>cmd-I</em> (MacOS) or <em>Ctrl-I</em> (Linux/Windows) to activate the help function. The contextual help page should show the help page for the <em>print</em> command. If you enter a new command the help page will change if a valid command is detected.</p>
 
 <p><img src="figs/contexthelp2.png" alt="contexthelp2"></p>
 
@@ -782,8 +782,8 @@ pre[class*="language-"] {
 <p>If a web session is running there are two possibilities to copy data <em>in</em> and <em>out</em>:</p>
 
 <ol>
-<li>In the file browser you can use the context menu after clicking the right mouse button which provides you a <em>Download</em> entry. With this function you can download any files which is shown in the file browser. For uploading files you can use the <em>Upload</em> button (see Sect. 1.5). All uploaded files will be stored in the current working directory of the file browser.</li>
-<li>The other possibility is to use any of the programs in a terminal tab. In the terminal there is a Ubuntu 18.04 Linux OS running which provides some of the common programs for data exchange, <em>scp</em>, <em>wget</em>, <em>git</em>, etc. </li>
+<li>In the file browser you can use the context menu after clicking the right mouse button which provides you a <em>Download</em> entry. With this function you can download any files which is shown in the file browser. For uploading files you can use the <em>Upload</em> button (see Sect. 1.5). All uploaded files will be stored in the current working directory of the file browser. If you are using the right mouse button on an empty region of the file browser you will get an additional context menu with a <em>Download current folder as an archive</em> entry. This downloads the current folder in an archive to your local device. The name of the archive is the name of the current folder. In the archive you have the current folder as an archive folder!</li>
+<li>The other possibility is to use any of the programs in a terminal tab. In the terminal there is a Ubuntu Linux OS running which provides some of the common programs for data exchange, <em>scp</em>, <em>wget</em>, <em>git</em>, etc. </li>
 </ol>
 
 <hr>
@@ -1072,7 +1072,7 @@ Content Cell  | Content Cell</code></pre></div>
 <p>You are probably using a <em>Microsoft Edge</em> brower, please use either a <em>Mozilla Firefox</em> or Google Chrome/Chromium browser.</p></li>
 <li><p>When I logged into the system the webpage is somehow flickering?</p>
 
-<p>You are probably using an <em>Apple Safari</em> browser, please use either a <em>Mozilla Firefox</em> or Google Chrome/Chromium browser.</p></li>
+<p>You are probably using an old <em>Apple Safari</em> browser, please use either a <em>Mozilla Firefox</em> or Google Chrome/Chromium browser.</p></li>
 <li><p>The jupyterlab environment didn&#39;t start normally, what can I do?</p>
 
 <p>There are different possibilities which prohibit the environment to start. In the past we have faced a few problems:</p>
